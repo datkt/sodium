@@ -1,0 +1,12 @@
+# vim: set syntax=make:
+
+headers = sodium.h
+headerFilter = sodium.h sodium/**
+compilerOpts = -I libsodium/src/libsodium/include
+#libraryPaths = libsodium/src/libsodium/.libs
+libraryPaths = .
+
+staticLibraries = libsodium.a
+
+#staticLibraries = libaesni.a libavx2.a libavx512f.a librdrand.a libsodium.a libsse2.a libsse41.a libssse3.a
+

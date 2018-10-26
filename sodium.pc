@@ -1,0 +1,5 @@
+Name: sodium
+Version: 0.0.1
+Description: libsodium bindings for Kotlin
+
+Libs: -lsodium

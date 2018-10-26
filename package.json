@@ -1,0 +1,19 @@
+{
+  "name": "sodium",
+  "version": "0.0.1",
+  "description": "libsodium bindings for Kotlin",
+  "directories": {},
+  "scripts": {
+    "test": "make test",
+    "install": "make klib",
+    "fetch-libsodium": "git submodule update --recursive --init"
+  },
+  "keywords": [
+    "kotlin",
+    "libsodium",
+    "sodium"
+  ],
+  "author": "Joseph Werle <werle@littlstar.com>",
+  "license": "MIT",
+  "devDependencies": {}
+}
