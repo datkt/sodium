@@ -15,20 +15,6 @@ $ npm install datkt/sodium
 
 **Note:** *This will install **sodium** into `node_modules/sodium`*
 
-### From clib
-
-```sh
-$ clib install datkt/sodium
-```
-
-**Note:** *This will install **sodium** into `deps/sodium`*
-
-### From GHI
-
-```sh
-$ ghi install datkt/sodium
-```
-
 ### Install From Source
 
 ```sh
@@ -37,37 +23,6 @@ $ cd sodium
 $ make build # or make klib
 $ make install
 ```
-
-## Building
-
-The `sodium` package can be built from source into various targets.
-
-### Kotlin Library
-
-`sodium.klib`, a Kotlin library that can be linked with `konanc` can be
-built from source.
-
-```sh
-$ make klib
-```
-
-which will produce `build/lib/sodium.klib`. The library can be installed
-with `klib` by running `make install`
-
-### Static Library
-
-`libsodium.a`, a static library that can be linked with `konanc` can be
-built from source.
-
-```sh
-$ make static
-```
-
-which will produce `build/lib/libsodium.a` and C header files in
-`build/include`. The library can be installed into your system by
-running `make install`. The path prefix can be set by defining the
-`PREFIX` environment or `make` variable. It defaults to
-`PREFIX=/usr/local`
 
 ## Usage
 
@@ -175,6 +130,37 @@ buffer.usePinned { pinned ->
   )
 }
 ```
+
+## Building
+
+The `sodium` package can be built from source into various targets.
+
+### Kotlin Library
+
+`sodium.klib`, a Kotlin library that can be linked with `konanc` can be
+built from source.
+
+```sh
+$ make klib
+```
+
+which will produce `build/lib/sodium.klib`. The library can be installed
+with `klib` by running `make install`
+
+### Static Library
+
+`libsodium.a`, a static library that can be linked with `konanc` can be
+built from source.
+
+```sh
+$ make static
+```
+
+which will produce `build/lib/libsodium.a` and C header files in
+`build/include`. The library can be installed into your system by
+running `make install`. The path prefix can be set by defining the
+`PREFIX` environment or `make` variable. It defaults to
+`PREFIX=/usr/local`
 
 ## See Also
 
