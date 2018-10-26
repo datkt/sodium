@@ -107,10 +107,10 @@ translates to the following Kotlin function signature:
 ```kotlin
 fun crypto_generichash(out: CValuesRef<UByteVar>?,
                        outlen: size_t,
-                        `in`: CValuesRef<UByteVar>?,
-                        inlen: ULong,
-                        key: CValuesRef<UByteVar>?,
-                        keylen: size_t): Int;
+                       `in`: CValuesRef<UByteVar>?,
+                       inlen: ULong,
+                       key: CValuesRef<UByteVar>?,
+                       keylen: size_t): Int;
 ```
 
 and can be called in Kotlin like:
