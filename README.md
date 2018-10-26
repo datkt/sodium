@@ -24,6 +24,12 @@ $ make build # or make klib
 $ make install
 ```
 
+## Prerequisites
+
+* [Kotlin/Native](https://github.com/JetBrains/kotlin-native) and the
+  `konanc` command line program.
+* [make](https://www.gnu.org/software/make/)
+
 ## Usage
 
 ```sh
