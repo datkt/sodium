@@ -1,6 +1,6 @@
 {
   "name": "sodium",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "libsodium bindings for Kotlin",
   "directories": {},
   "scripts": {
