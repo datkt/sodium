@@ -1,6 +1,7 @@
 #!/bin/sh
 ## borrowed from https://github.com/sodium-friends/sodium-native/blob/master/configure
 PREFIX="${PREFIX:-$PWD}"
+KONAN="${KONAN:-$HOME/.konan}"
 
 cd libsodium
 
@@ -10,14 +11,13 @@ cd libsodium
 if [ -z "$SYSROOT" ]; then
   case $(uname) in
     **Linux**)
-      #export SYSROOT="$HOME/.konan/dependencies/target-gcc-toolchain-3-linux-x86-64/x86_64-unknown-linux-gnu/sysroot"
-      export CC="$HOME/.konan/dependencies/target-gcc-toolchain-3-linux-x86-64/bin/x86_64-unknown-linux-gnu-gcc"
+      case $(uname -a) in
+        **x86_64**)
+          export CC="$KONAN/dependencies/target-gcc-toolchain-3-linux-x86-64/bin/x86_64-unknown-linux-gnu-gcc"
+          ;;
+      esac
       ;;
   esac
 fi
 
-echo
-echo "SYSROOT=$SYSROOT"
-echo
-
-./configure --prefix=$PREFIX --with-gnu-ld --with-sysroot="$SYSROOT" "$@"
+./configure --prefix=$PREFIX "$@"
