@@ -59,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+lib/
+tmp/
+META-INF/
+sodium-build/
+build/
+*.klib
+*.o
+*.class
+*.kexe
+*.a
