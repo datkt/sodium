@@ -69,3 +69,4 @@ build/
 *.class
 *.kexe
 *.a
+include/
