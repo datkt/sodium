@@ -1,7 +1,7 @@
-import sodium.sodium_init
-import sodium.randombytes_buf
-import sodium.randombytes_random
-import sodium.randombytes_uniform
+import datkt.sodium.sodium_init
+import datkt.sodium.randombytes_buf
+import datkt.sodium.randombytes_random
+import datkt.sodium.randombytes_uniform
 
 import util.toHexString
 import kotlinx.cinterop.*

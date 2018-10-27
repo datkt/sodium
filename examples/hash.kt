@@ -1,6 +1,6 @@
-import sodium.sodium_init
-import sodium.crypto_generichash
-import sodium.crypto_generichash_BYTES
+import datkt.sodium.sodium_init
+import datkt.sodium.crypto_generichash
+import datkt.sodium.crypto_generichash_BYTES
 
 import util.toHexString
 import kotlinx.cinterop.*
