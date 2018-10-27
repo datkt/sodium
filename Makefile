@@ -26,7 +26,7 @@ clean:
 	if test -f libsodium/Makefile; then $(MAKE) clean -C libsodium; fi
 
 sodium.klib: sodium.def lib/libsodium.a
-	cinterop -def sodium.def -o sodium
+	cinterop -pkg datkt.sodium -def sodium.def -o sodium
 
 lib/libsodium.a: libsodium
 	./configure
