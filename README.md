@@ -33,14 +33,14 @@ $ make install
 ## Usage
 
 ```sh
-## Compile a program in 'main.kt' and link sodium.klib found in node_modules
-$ konanc -l "$(find node_modules -name sodium.klib)" main.kt
+## Compile a program in 'main.kt' and link sodium.klib found in `node_modules/`
+$ konanc -r node_modules/@datkt -l sodium/sodium main.kt
 ```
 
 where `main.kt` might be
 
 ```kotlin
-import sodium.* // entire libsodium API
+import datkt.sodium.* // entire libsodium API
 import kotlinx.cinterop.* // exposes types needed for interop
 
 fun main(args: Array<String>) {
@@ -54,10 +54,10 @@ fun main(args: Array<String>) {
 
 ```kotlin
 import kotlinx.cinterop.*
-import sodium.sodium_init
-import sodium.randombytes_buf
-import sodium.randombytes_random
-import sodium.randombytes_uniform
+import datkt.sodium.sodium_init
+import datkt.sodium.randombytes_buf
+import datkt.sodium.randombytes_random
+import datkt.sodium.randombytes_uniform
 
 fun main(args: Array<String>) {
   val rc = sodium_init()
