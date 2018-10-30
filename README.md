@@ -5,23 +5,12 @@ libsodium bindings for Kotlin/Native.
 
 ## Installation
 
-The `sodium` package an be installed with various package managers.
+The `datkt.sodium` package an be installed with various package managers.
 
 ### From NPM
 
 ```sh
-$ npm install datkt/sodium
-```
-
-**Note:** *This will install **sodium** into `node_modules/sodium`*
-
-### Install From Source
-
-```sh
-$ git clone git@github.com:datkt/sodium.git
-$ cd sodium
-$ make build # or make klib
-$ make install
+$ npm install @datkt/sodium
 ```
 
 ## Prerequisites
