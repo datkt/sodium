@@ -1,6 +1,6 @@
 {
   "name": "@datkt/sodium",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "libsodium bindings for Kotlin",
   "directories": {},
   "scripts": {
