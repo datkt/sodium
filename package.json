@@ -5,7 +5,7 @@
   "directories": {},
   "scripts": {
     "test": "make test",
-    "install": "make klib",
+    "postinstall": "make klib",
     "fetch-libsodium": "git submodule update --recursive --init"
   },
   "keywords": [
