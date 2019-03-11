@@ -1,0 +1,7 @@
+libsodium/
+include/
+lib/
+*-build/
+examples/
+*.tgz
+*.klib
