@@ -9,13 +9,9 @@ cd libsodium
 ./autogen.sh
 
 if [ -z "$SYSROOT" ]; then
-  case $(uname) in
-    **Linux**)
-      case $(uname -a) in
-        **x86_64**)
-          export CC="$KONAN/dependencies/target-gcc-toolchain-3-linux-x86-64/bin/x86_64-unknown-linux-gnu-gcc"
-          ;;
-      esac
+  case $(uname -a) in
+    **x86_64**)
+      export CC="$KONAN/dependencies/clang-llvm-*-x86-64/bin/clang"
       ;;
   esac
 fi
