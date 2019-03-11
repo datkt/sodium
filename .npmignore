@@ -1,4 +1,3 @@
-libsodium/
 include/
 lib/
 *-build/
