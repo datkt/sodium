@@ -2,6 +2,8 @@
 ## borrowed from https://github.com/sodium-friends/sodium-native/blob/master/configure
 PREFIX="${PREFIX:-$PWD}"
 KONAN="${KONAN:-$HOME/.konan}"
+ARCH=${x86_64}
+GCC=${GCC:-gcc}
 
 cd libsodium
 
@@ -10,10 +12,20 @@ cd libsodium
 
 if [ -z "$SYSROOT" ]; then
   case $(uname -a) in
-    **x86_64**)
-      export CC="$KONAN/dependencies/clang-llvm-*-x86-64/bin/clang"
+    **Linux*x86_64**)
+      ARCH=x86_64
+      GCC=gcc
+      ;;
+
+    **Darwin*x86_64**)
+      ARCH=x86_64
+      GCC=clang
       ;;
   esac
+
+  export CC=$(find $(find $(find $KONAN/dependencies -name *${ARCH/-/_/}* -type d) -name bin -type d) -name *$GCC | head -n1)
 fi
 
+echo $CC
 ./configure --prefix=$PREFIX "$@"
+make install
