@@ -5,3 +5,4 @@ headerFilter = sodium.h sodium/**
 staticLibraries = libsodium.a
 libraryPaths = lib
 compilerOpts = -Iinclude
+linkerOpts = {{LDFLAGS}}

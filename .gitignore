@@ -70,3 +70,4 @@ build/
 *.kexe
 *.a
 include/
+sodium.def

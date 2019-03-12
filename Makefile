@@ -24,9 +24,13 @@ clean:
 	$(RM) sodium-build/ sodium.klib META-INF lib tmp libsodium.a include
 	$(MAKE) clean -C examples
 	if test -f libsodium/Makefile; then $(MAKE) clean -C libsodium; fi
+	rm -f sodium.def
 
 sodium.klib: sodium.def lib/libsodium.a
 	cinterop -pkg datkt.sodium -def sodium.def -o sodium
+
+sodium.def: sodium.def.in
+	./configure
 
 lib/libsodium.a: libsodium
 	./configure
