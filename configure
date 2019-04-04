@@ -28,5 +28,4 @@ fi
 
 cd ..
 rm -f sodium.def
-export LDFLAGS="$(pkg-config libsodium/libsodium.pc --libs)"
 cat ./sodium.def.in | ./scripts/mush.sh > sodium.def
