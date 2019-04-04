@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ## borrowed from https://github.com/sodium-friends/sodium-native/blob/master/configure
 PREFIX="${PREFIX:-$PWD}"
 KONAN="${KONAN:-$HOME/.konan}"
